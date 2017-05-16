@@ -18,11 +18,13 @@
 		This statement has 4 expressions in it:
 
 			- 2 is a literal expression
-			- b is a value expression
+			- b is a variable expression
 			- b * 2 is an arithmetic expression
-			- a = b * 2 is an assignment expressions, as it assigns the product as "a". 
+			- a = b * 2 is an assignment expression, as it assigns the product as "a". 
+
 
 			-->
+
 
 			<script> 
 
@@ -31,6 +33,147 @@
 			console.log( b );
 
 			</script>
+
+	<!--
+
+	Output 
+
+	In the previous code snippet we used console.log( b )
+
+	log ( b ):
+	 	is a function call. What's happening is we're handing the b variable to that function, which asks it to take the value of b and print it to the console.
+
+	console. : 
+		is an object reference where the log( b ) function is located.
+	
+	Input
+	
+	The most common way is by using HTML forms and having JS read values into program variables.
+
+	You can also use prompt(..) function. -->
+	<script>
+		age = prompt("What is your age?");
+
+		console.log(age);
+	</script>
+
+
+<!--
+	Operators
+
+	Are how we perform actions on variables and values
+
+	Common JS Operators:
+
+		Assignment: = as in a = 2.
+		
+		Math: + (addition), - (subtraction), * (multiplication), / (division), as in a * 3 or 2 / 4
+
+		Compound assignment: += , -= , *= , and /= are compound operators that combine a math operation with assignment, as in a += 2 (same as a = a + 2);
+
+		Increment/Decrement: ++ (increment), -- (decrement), as in a++ (a = a + 1);
+
+		Object Property Access: . as in console.log().
+			
+			Objects are values that hold other values at specific named locations called properties. obj.a means an object value called obj with a property with of the name a. 
+
+			Properties can alternatively be accessed as obj["a"].
+
+		Equality: == (loose-equals), === (strict-equals), != (loose-not-equals), !== (strict-not-equals) as in a == b or a !== b.
+
+		Comparison: < (less than), > (greater than), <= (less than or loose-equals), >= (greater than or loose-equals), as in a <= b.
+
+		Logical: && (and), || (or), as in a || b that sleects either a or b.
+
+
+	Values & Types
+
+	When you express values in a program, you choose different representations for those values based on what you plan to do with them.
+
+	These different representation for values are called TYPES in programming terminology. JS built-in types:
+
+		When you need to do math, you want a NUMBER.
+
+		When you need to print a value on the screen, you need a STRING (one or more characters, words, senctences).
+
+		When you need to make a decision on your program, you need a BOOLEAN (true or false).
+
+	Values that are included directly in the source code are called LITERALS. STRING literals are surrounded by double quotes "..." or single quotes '...' (the only difference is stylistic preference). NUMBER and BOOLEAN literals are just presented as is (42, TRUE, etc).
+
+-->
+	<script>
+		
+		"I am a string";
+		'I am also a string';
+
+		42
+
+		true;
+		false;
+
+	</script>
+
+	
+	<!--
+
+	Converting between types
+
+	Converting between types in JS is called "coercion".
+
+	If someone enters a series of numeric characters into a form on an ecommerce page, that's a STRING, but if you need to then use that value to do math operations, you need to "coerce" it to a NUMBER.
+
+	JS offers several different facilities for forcibly coercing between types.
+
+	-->
+
+	<script>
+		
+		var a = "42";
+		var b = Number(a);
+		
+		console.log ( a );
+		console.log ( b );
+
+	</script>
+
+	<!--
+
+	Using Number(..) as shown is an "explicit" coercion from any other type to the number type.
+
+	When comparing string "99.99" and the number 99.99, you'd think they're equivalent, right? You could say they're "loosely equal".
+
+	JS coerces them "implicitly" when comparing them loosely. Ex: "99.99" == 99.99 is true because JS implicitly coerces "99.99" to a number, but "99.99" === 99.99 is false because it's comparing by type.
+
+	
+	Code Comments
+
+	Comments are lines of code to explain things to a human, and won't be read by the interpreter/compiler.
+
+	Guidelines:
+
+		Code without comments is suboptimal
+
+		Too many comments (one per line, for example) is probably a sign of poorly written code.
+
+		Comments should explain why, not what. They can optionally explain how if that's particularly confusing.
+
+	In JS, you have single-line comments and multiline comments.
+
+	Single-line: // asdfadasasdf //
+	
+	Multi-line: /* wfasdasdfd
+					sfsdfgsdfg
+					dfsfdsafsfd
+					sdsdasdf
+							*/
+
+	
+
+
+
+
+
+
 
 
 
