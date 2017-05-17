@@ -166,11 +166,68 @@
 					dfsfdsafsfd
 					sdsdasdf
 							*/
+	Variables
 
-	
+		When you assign a value to a symbolic container, you assing it to a "variable"- so called because the value in this container can vary over time as needed.
 
+		Static typing, happens when you declare a variable (container) to hold a specific TYPE of value, such as a NUMBER or STRING. Some programming languaes use this.
 
+		JavaScript uses weak typing, or dynamic typing. which allows a single variable to represent a value no matter what type form the value takes at any given moment.
+		Variables can hold values of ANY TYPE without any TYPE enforcement (static typing).
 
+		To declare a variable we use var:
+
+		-->
+
+		<script>
+			
+			var amount = 99.99;
+			amount = amount * 2;
+			console.log( amount );
+
+			//Convert amount to string and add "$" symbol
+
+			amount = "$" + String( amount );
+			console.log(amount);
+
+		</script>
+		
+		<!--
+
+		Note that the variable "amount" holds a running value that changes over the course of the program, illustrating the primary purpose of variables: managing program "state"
+
+			State means tracking the changes to values as your program runs.
+
+		Constants are variables with values that do not change over time. In JavaScript they're usually capitalized, with underscores between multiple words.
+
+		AS OF JAVASCRIPT ES6:
+
+		const TAX_RATE = 0.08;
+
+		var amount = 99.99;
+
+		-->
+
+		<script>
+			
+			const TAX_RATE = 0.08; // 8% sales tax
+
+			var amount = 99.99;
+
+			amount = amount * 2;
+
+			amount = amount + (amount * TAX_RATE);
+
+			console.log(amount); // 215.9784
+			console.log(amount.toFixed(2)); // "215.98"
+
+			//toFixed(..) lets us specify how many decimal places we'd like the number rounded to.
+
+		</script>
+
+		<!--
+
+		Constants also prevent accidentally changing value somewhere else after the initial setting. If you tried to assign a different value to TAX_RATE after that first declaration, your program would reject the change.
 
 
 
